@@ -51,7 +51,7 @@ def get_filters():
         month = input(
             "Enter the month to analyze or type 'all' to include every month: ").strip().lower()
 
-        if month not in ['january', 'february', 'march', 'april', 'june', 'all']:
+        if month not in months_dict and month != 'all':
             print(
                 "It seems like you have provided an incorrect option. Please try again.")
             continue
@@ -61,7 +61,7 @@ def get_filters():
         day = input(
             "Enter the day of the week to analyze or type 'all' to include every day of the week: ").strip().lower()
 
-        if day not in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']:
+        if day not in days_dict and day != 'all':
             print(
                 "It seems like you have provided an incorrect option. Please try again.")
             continue
