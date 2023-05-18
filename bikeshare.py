@@ -115,8 +115,7 @@ def time_stats(df):
     hour = df['hour'].mode()[0]
     print('Frequently Travelled Hour: ', hour)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    display_execution_time(start_time)
 
 
 def station_stats(df):
@@ -135,8 +134,7 @@ def station_stats(df):
     popular_trip = df['trip'].mode()[0]
     print('Most popular trip taken: ', popular_trip)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    display_execution_time(start_time)
 
 
 def trip_duration_stats(df):
@@ -149,8 +147,7 @@ def trip_duration_stats(df):
 
     print('Average trip duration', df['Trip Duration'].mean())
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    display_execution_time(start_time)
 
 
 def user_stats(df):
@@ -182,8 +179,7 @@ def user_stats(df):
     except:
         print('Washington has no birth year records for analysis')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    display_execution_time(start_time)
 
 
 def display_data(df):
@@ -198,6 +194,10 @@ def display_data(df):
         start_loc += 5
         rem = len(df.index) - start_loc
         view_data = input("Do you wish to continue? (Remaining records: {}): ".format(rem)).lower()
+
+def display_execution_time(start_time):
+    print("\nThis took %s seconds." % (time.time() - start_time)) 
+    print('-'*40)
 
 def main():
     while True:
