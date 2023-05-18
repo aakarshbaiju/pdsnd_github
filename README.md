@@ -12,5 +12,4 @@ Exploration of the bikeshare dataset to evaluate and analyse basic trends across
 Used Chicago, New York City and Washington data sets in csv format.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Udacity forums and stackoverflow
